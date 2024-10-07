@@ -53,8 +53,9 @@ public class StatsService {
 
     public int profitMonth(long[] arrSales) {
         int month = 0;
+        long average = averageSumm(arrSales);
         for (int i = 0; i < 12; i++) {
-            if (averageSumm(arrSales) < arrSales[i]) {
+            if (average < arrSales[i]) {
                 month++;
             }
         }
